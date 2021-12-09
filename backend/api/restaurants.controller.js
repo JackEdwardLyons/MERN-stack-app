@@ -1,4 +1,4 @@
-import RestaurantsDAO from "./dao/restaurantsDAO.js";
+import RestaurantsDAO from "../dao/restaurantsDAO.js";
 
 export default class RestaurantsCtrl {
   static async apiGetRestaurants(req, res, next) {
@@ -30,6 +30,7 @@ export default class RestaurantsCtrl {
       entries_per_page: restaurantsPerPage,
       total_results: totalNumRestaurants,
     };
+
     res.json(response);
   }
 }
